@@ -1,0 +1,87 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ develop, feature/*, hotfix/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Check for migrations
+      id: check-migrations
+      run: |
+        python manage.py makemigrations --check --dry-run
+        if [ $? -eq 0 ]; then
+          echo "has_migrations=false" >> $GITHUB_OUTPUT
+        else
+          echo "has_migrations=true" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Run migrations
+      if: steps.check-migrations.outputs.has_migrations == 'true'
+      run: |
+        python manage.py migrate
+        
+    - name: Run tests
+      run: |
+        python manage.py test base.tests.ProcessTextAPITest -v 2
+        
+    - name: Run pytest
+      run: |
+        pytest base/tests.py -v
+        
+    - name: Check Django server startup
+      run: |
+        timeout 10s python manage.py runserver 0.0.0.0:8000 &
+        sleep 5
+        curl -f http://localhost:8000/ || exit 1
+        
+  merge-to-main:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Merge to main
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git checkout main
+        git pull origin main
+        git merge origin/${{ github.ref_name }} --no-edit
+        git push origin main
+        
+    - name: Delete source branch
+      if: startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/hotfix/')
+      run: |
+        git push origin --delete ${{ github.ref_name }} 
