@@ -5,6 +5,7 @@ on:
     branches: [ develop, feature/*, hotfix/* ]
   pull_request:
     branches: [ main ]
+    types: [ closed ]
 
 jobs:
   test:
@@ -72,7 +73,7 @@ jobs:
   merge-to-main:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref != 'refs/heads/main' && success()
     
     steps:
     - name: Checkout code
@@ -89,7 +90,4 @@ jobs:
         git merge origin/${{ github.ref_name }} --no-edit
         git push origin main
         
-    - name: Delete source branch
-      if: startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/hotfix/')
-      run: |
-        git push origin --delete ${{ github.ref_name }} 
+ 
