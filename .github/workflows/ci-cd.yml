@@ -30,12 +30,19 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        # Cài đặt PyTorch CPU version để tránh lỗi CUDA
+        pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+        # Cài đặt các dependencies khác
         pip install -r requirements.txt
+        
+    - name: Set environment variables
+      run: |
+        echo "DJANGO_SETTINGS_MODULE=NLP.settings" >> $GITHUB_ENV
         
     - name: Check for migrations
       id: check-migrations
       run: |
-        python manage.py makemigrations --check --dry-run
+        DJANGO_SETTINGS_MODULE=NLP.settings python manage.py makemigrations --check --dry-run
         if [ $? -eq 0 ]; then
           echo "has_migrations=false" >> $GITHUB_OUTPUT
         else
@@ -45,21 +52,22 @@ jobs:
     - name: Run migrations
       if: steps.check-migrations.outputs.has_migrations == 'true'
       run: |
-        python manage.py migrate
+        DJANGO_SETTINGS_MODULE=NLP.settings python manage.py migrate
         
     - name: Run tests
       run: |
-        python manage.py test base.tests.ProcessTextAPITest -v 2
+        DJANGO_SETTINGS_MODULE=NLP.settings python manage.py test base.tests.ProcessTextAPITest -v 2
         
     - name: Run pytest
       run: |
-        pytest base/tests.py -v
+        DJANGO_SETTINGS_MODULE=NLP.settings pytest base/tests.py -v
         
     - name: Check Django server startup
       run: |
-        timeout 10s python manage.py runserver 0.0.0.0:8000 &
+        DJANGO_SETTINGS_MODULE=NLP.settings timeout 10s python manage.py runserver 0.0.0.0:8000 &
         sleep 5
         curl -f http://localhost:8000/ || exit 1
+        echo "✅ Django server is running successfully"
         
   merge-to-main:
     needs: test

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.http import require_GET
 import json
 from .nlp_model import NLPModel
 
@@ -36,3 +37,15 @@ def process_text(request):
         return JsonResponse({
             'error': str(e)
         }, status=500)
+
+@require_GET
+def health_check(request):
+    """Health check endpoint để kiểm tra server có hoạt động không"""
+    return JsonResponse({
+        'status': 'ok',
+        'message': 'NLP API server is running',
+        'endpoints': {
+            'process_text': '/api/process-text/',
+            'health_check': '/'
+        }
+    })

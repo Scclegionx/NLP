@@ -73,3 +73,12 @@ class ProcessTextAPITest(TestCase):
         """Test API với method GET (không được phép)"""
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 405)  # Method Not Allowed
+
+    def test_health_check_endpoint(self):
+        """Test health check endpoint"""
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        result = json.loads(response.content)
+        self.assertIn('status', result)
+        self.assertEqual(result['status'], 'ok')
+        self.assertIn('endpoints', result)
