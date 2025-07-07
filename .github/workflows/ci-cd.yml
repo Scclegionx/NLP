@@ -2,16 +2,22 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ develop, feature/*, hotfix/* ]
+    branches: [ main, develop, feature/*, hotfix/* ]
   pull_request:
     branches: [ main ]
-    types: [ closed ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Debug workflow trigger
+      run: |
+        echo "Workflow triggered!"
+        echo "Event: ${{ github.event_name }}"
+        echo "Branch: ${{ github.ref_name }}"
+        echo "Ref: ${{ github.ref }}"
+        
     - name: Checkout code
       uses: actions/checkout@v4
       

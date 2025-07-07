@@ -26,7 +26,6 @@ def process_text(request):
         # Xử lý văn bản và trả về kết quả
         result = nlp_model.predict(text)
 
-        print("test hihi")
         
         return JsonResponse({
             'command': result['command'],
