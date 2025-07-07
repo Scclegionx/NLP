@@ -67,6 +67,7 @@ jobs:
         DJANGO_SETTINGS_MODULE=NLP.settings timeout 10s python manage.py runserver 0.0.0.0:8000 &
         sleep 5
         curl -f http://localhost:8000/ || exit 1
+        echo "✅ Django server is running successfully"
         
   merge-to-main:
     needs: test
