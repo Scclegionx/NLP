@@ -1,69 +1,114 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from pydantic import BaseModel
-from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import T5TokenizerFast, T5ForConditionalGeneration
 import torch
+import asyncio
+from typing import List
+from functools import lru_cache
 
 app = FastAPI()
 
-# Load model đã huấn luyện
+# ===== Model & Device =====
 model_dir = "./nlp-command-model"
-tokenizer = T5Tokenizer.from_pretrained(model_dir)
+tokenizer = T5TokenizerFast.from_pretrained(model_dir)
 model = T5ForConditionalGeneration.from_pretrained(model_dir)
 model.eval()
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
-# Lưu trữ hội thoại
+# ===== Batch Queue Config =====
+BATCH_INTERVAL = 0.05  # thời gian chờ tối đa (50ms)
+MAX_BATCH_SIZE = 8
+queue = asyncio.Queue()
+
+# ===== Lưu trữ hội thoại =====
 dialog_history = []
 
-# Request schema
+# ===== Schema =====
 class InferenceRequest(BaseModel):
     text: str
     with_context: bool = False
     history_limit: int = 3
 
-# Xử lý inference
-def infer(text):
-    input_text = "trich xuat: " + text
-    input_ids = tokenizer.encode(input_text, return_tensors="pt", truncation=True).to(device)
-    output_ids = model.generate(input_ids, max_length=64, num_beams=4, early_stopping=True)
-    result = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-    return result
+class BatchItem:
+    def __init__(self, request: InferenceRequest):
+        self.request = request
+        self.future = asyncio.get_event_loop().create_future()
 
-# Xử lý inference có context thông minh hơn
-def infer_with_context(text, history_limit=3):
+# ===== Cache encode để tránh token hóa lại nếu input trùng =====
+@lru_cache(maxsize=512)
+def encode_cached(text: str):
+    return tokenizer(text, return_tensors="pt", truncation=True, padding=True)
+
+# ===== Hàm xử lý input =====
+def prepare_input(req: InferenceRequest):
     global dialog_history
 
-    # Kiểm tra xem câu mới có phủ định/sửa không
-    negation_keywords = ["phải là", "ý là", "sửa lại", "không phải", "mình nói nhầm", "mình định nói"]
-    lowered_text = text.lower()
-    is_negation = any(kw in lowered_text for kw in negation_keywords)
+    if req.with_context:
+        negation_keywords = ["phải là", "ý là", "sửa lại", "không phải", "mình nói nhầm", "mình định nói"]
+        lowered_text = req.text.lower()
+        is_negation = any(kw in lowered_text for kw in negation_keywords)
+        if is_negation and dialog_history:
+            dialog_history.pop()
 
-    # Nếu là phủ định → xóa câu trước trong lịch sử (nếu có)
-    if is_negation and len(dialog_history) >= 1:
-        dialog_history.pop()  # loại bỏ câu trước
+        dialog_history.append(req.text)
+        formatted_context = " ".join([f"[Câu {i+1}]: {utt}" for i, utt in enumerate(dialog_history[-req.history_limit:])])
+        return "trich xuat: " + formatted_context.strip()
+    else:
+        return "trich xuat: " + req.text
 
-    # Thêm câu hiện tại vào history
-    dialog_history.append(text)
+# ===== Batch worker tối ưu =====
+async def batch_worker():
+    while True:
+        batch = []
 
-    # Format lại context cho rõ ràng (Cách 1)
-    formatted_context = ""
-    for i, utt in enumerate(dialog_history[-history_limit:], 1):
-        formatted_context += f"[Câu {i}]: {utt} "
+        # Chờ item đầu tiên hoặc hết thời gian batch
+        try:
+            item = await asyncio.wait_for(queue.get(), timeout=BATCH_INTERVAL)
+            batch.append(item)
+        except asyncio.TimeoutError:
+            pass
 
-    input_text = "trich xuat: " + formatted_context.strip()
+        # Gom thêm các item còn lại
+        while not queue.empty() and len(batch) < MAX_BATCH_SIZE:
+            batch.append(await queue.get())
 
-    input_ids = tokenizer.encode(input_text, return_tensors="pt", truncation=True).to(device)
-    output_ids = model.generate(input_ids, max_length=64, num_beams=4, early_stopping=True)
-    result = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+        if not batch:
+            continue
 
-    return result
+        # Chuẩn bị input
+        texts = [prepare_input(item.request) for item in batch]
+        encodings_list = [encode_cached(txt) for txt in texts]
 
+        # Gộp batch tensors
+        encodings = {
+            k: torch.cat([e[k] for e in encodings_list], dim=0).to(device)
+            for k in encodings_list[0]
+        }
+
+        # Inference
+        with torch.no_grad():
+            output_ids = model.generate(
+                **encodings,
+                max_length=32,  # giảm length để nhanh hơn
+                num_beams=1,    # tắt beam search để tăng tốc
+                early_stopping=True
+            )
+
+        results = tokenizer.batch_decode(output_ids.cpu(), skip_special_tokens=True)
+
+        # Trả kết quả cho từng request
+        for item, res in zip(batch, results):
+            item.future.set_result(res)
+
+@app.on_event("startup")
+async def startup_event():
+    asyncio.create_task(batch_worker())
 
 @app.post("/infer")
-def run_inference(req: InferenceRequest):
-    if req.with_context:
-        result = infer_with_context(req.text, req.history_limit)
-    else:
-        result = infer(req.text)
+async def run_inference(req: InferenceRequest):
+    item = BatchItem(req)
+    await queue.put(item)
+    result = await item.future
     return {"input": req.text, "output": result}
