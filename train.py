@@ -11,7 +11,10 @@ with open("nlp_command_dataset.json", encoding="utf-8") as f:
 train_data = []
 for item in raw_data:
     input_text = item["input"]
-    output_text = f"command: {item['command']} | entity: {', '.join(item['entities']) if item['entities'] else 'none'} | value: {', '.join(item['values']) if item['values'] else 'none'}"
+    # Format output rõ ràng hơn với entity và value
+    entity_text = ', '.join(item['entities']) if item['entities'] else 'none'
+    value_text = ', '.join(item['values']) if item['values'] else 'none'
+    output_text = f"command: {item['command']} | ent: {entity_text} | val: {value_text}"
     train_data.append({"input": input_text, "output": output_text})
 
 dataset = Dataset.from_list(train_data)

@@ -868,5 +868,195 @@
     "values": [
       "10h tối"
     ]
+  },
+  {
+    "input": "nhắn tin cho cháu Vương là chiều nay đón bà lúc 5h",
+    "command": "send-mess",
+    "entities": [
+      "cháu Vương"
+    ],
+    "values": [
+      "chiều nay đón bà lúc 5h"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho anh Minh Hà là tối nay có họp",
+    "command": "send-mess",
+    "entities": [
+      "anh Minh Hà"
+    ],
+    "values": [
+      "tối nay có họp"
+    ]
+  },
+  {
+    "input": "nhắn tin cho chị Lan Anh là mai đi chơi",
+    "command": "send-mess",
+    "entities": [
+      "chị Lan Anh"
+    ],
+    "values": [
+      "mai đi chơi"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho em Vân là về muộn",
+    "command": "send-mess",
+    "entities": [
+      "em Vân"
+    ],
+    "values": [
+      "về muộn"
+    ]
+  },
+  {
+    "input": "nhắn tin cho cô Hương là con sắp về",
+    "command": "send-mess",
+    "entities": [
+      "cô Hương"
+    ],
+    "values": [
+      "con sắp về"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho chú Nam là có việc gấp",
+    "command": "send-mess",
+    "entities": [
+      "chú Nam"
+    ],
+    "values": [
+      "có việc gấp"
+    ]
+  },
+  {
+    "input": "nhắn tin cho bác Tâm là hôm nay bận",
+    "command": "send-mess",
+    "entities": [
+      "bác Tâm"
+    ],
+    "values": [
+      "hôm nay bận"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho dì Mai là về sớm",
+    "command": "send-mess",
+    "entities": [
+      "dì Mai"
+    ],
+    "values": [
+      "về sớm"
+    ]
+  },
+  {
+    "input": "nhắn tin cho thầy Dũng là em xin phép nghỉ",
+    "command": "send-mess",
+    "entities": [
+      "thầy Dũng"
+    ],
+    "values": [
+      "em xin phép nghỉ"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho cô giáo Hoa là bài tập đã xong",
+    "command": "send-mess",
+    "entities": [
+      "cô giáo Hoa"
+    ],
+    "values": [
+      "bài tập đã xong"
+    ]
+  },
+  {
+    "input": "nhắn tin cho bạn Hùng là mai gặp nhau",
+    "command": "send-mess",
+    "entities": [
+      "bạn Hùng"
+    ],
+    "values": [
+      "mai gặp nhau"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho đồng nghiệp Minh là họp lúc 3h",
+    "command": "send-mess",
+    "entities": [
+      "đồng nghiệp Minh"
+    ],
+    "values": [
+      "họp lúc 3h"
+    ]
+  },
+  {
+    "input": "nhắn tin cho sếp Trung là báo cáo đã gửi",
+    "command": "send-mess",
+    "entities": [
+      "sếp Trung"
+    ],
+    "values": [
+      "báo cáo đã gửi"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho khách hàng Vân là đơn hàng đã xác nhận",
+    "command": "send-mess",
+    "entities": [
+      "khách hàng Vân"
+    ],
+    "values": [
+      "đơn hàng đã xác nhận"
+    ]
+  },
+  {
+    "input": "nhắn tin cho cháu bé An là bà đã về",
+    "command": "send-mess",
+    "entities": [
+      "cháu bé An"
+    ],
+    "values": [
+      "bà đã về"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho con trai Minh là bố đang trên đường",
+    "command": "send-mess",
+    "entities": [
+      "con trai Minh"
+    ],
+    "values": [
+      "bố đang trên đường"
+    ]
+  },
+  {
+    "input": "nhắn tin cho con gái Lan là mẹ yêu con",
+    "command": "send-mess",
+    "entities": [
+      "con gái Lan"
+    ],
+    "values": [
+      "mẹ yêu con"
+    ]
+  },
+  {
+    "input": "gửi tin nhắn cho vợ Hương là anh về muộn",
+    "command": "send-mess",
+    "entities": [
+      "vợ Hương"
+    ],
+    "values": [
+      "anh về muộn"
+    ]
+  },
+  {
+    "input": "nhắn tin cho chồng Nam là em đã về",
+    "command": "send-mess",
+    "entities": [
+      "chồng Nam"
+    ],
+    "values": [
+      "em đã về"
+    ]
   }
 ]
