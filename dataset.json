@@ -1,0 +1,1246 @@
+{
+  "train": [
+    {
+      "text": "nhắn tin cho mẹ là con sắp về",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "mẹ",
+        "MESSAGE": "con sắp về",
+        "PLATFORM": "sms"
+      },
+      "value": "con sắp về"
+    },
+    {
+      "text": "nhắn tin cho chú Vương là mai đi chơi",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "chú Vương",
+        "MESSAGE": "mai đi chơi",
+        "PLATFORM": "sms"
+      },
+      "value": "mai đi chơi"
+    },
+    {
+      "text": "gửi tin nhắn cho anh Minh là chiều nay về muộn",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "anh Minh",
+        "MESSAGE": "chiều nay về muộn",
+        "PLATFORM": "sms"
+      },
+      "value": "chiều nay về muộn"
+    },
+    {
+      "text": "nhắn tin cho chị Lan là tối nay về sớm",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "chị Lan",
+        "MESSAGE": "tối nay về sớm",
+        "PLATFORM": "sms"
+      },
+      "value": "tối nay về sớm"
+    },
+    {
+      "text": "gửi tin nhắn cho bố là tối nay về muộn",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "bố",
+        "MESSAGE": "tối nay về muộn",
+        "PLATFORM": "sms"
+      },
+      "value": "tối nay về muộn"
+    },
+    {
+      "text": "nhắn tin cho chị là mai đi chơi",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "chị",
+        "MESSAGE": "mai đi chơi",
+        "PLATFORM": "sms"
+      },
+      "value": "mai đi chơi"
+    },
+    {
+      "text": "gửi tin nhắn cho anh là chiều nay về muộn",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "anh",
+        "MESSAGE": "chiều nay về muộn",
+        "PLATFORM": "sms"
+      },
+      "value": "chiều nay về muộn"
+    },
+    {
+      "text": "nhắn tin cho em là tối nay về sớm",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "em",
+        "MESSAGE": "tối nay về sớm",
+        "PLATFORM": "sms"
+      },
+      "value": "tối nay về sớm"
+    },
+    {
+      "text": "gửi tin nhắn cho bạn là mai đi học",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "bạn",
+        "MESSAGE": "mai đi học",
+        "PLATFORM": "sms"
+      },
+      "value": "mai đi học"
+    },
+    {
+      "text": "nhắn tin cho chị qua whatsapp là mai đi chơi",
+      "intent": "send-msg-whatsapp",
+      "entities": {
+        "RECEIVER": "chị",
+        "MESSAGE": "mai đi chơi",
+        "PLATFORM": "whatsapp"
+      },
+      "value": "mai đi chơi"
+    },
+    {
+      "text": "gửi tin nhắn cho bạn qua whatsapp là hẹn gặp lúc 7h",
+      "intent": "send-msg-whatsapp",
+      "entities": {
+        "RECEIVER": "bạn",
+        "MESSAGE": "hẹn gặp lúc 7h",
+        "PLATFORM": "whatsapp"
+      },
+      "value": "hẹn gặp lúc 7h"
+    },
+    {
+      "text": "nhắn tin cho mẹ qua whatsapp là con sắp về",
+      "intent": "send-msg-whatsapp",
+      "entities": {
+        "RECEIVER": "mẹ",
+        "MESSAGE": "con sắp về",
+        "PLATFORM": "whatsapp"
+      },
+      "value": "con sắp về"
+    },
+    {
+      "text": "gửi tin nhắn cho bố qua whatsapp là tối nay về muộn",
+      "intent": "send-msg-whatsapp",
+      "entities": {
+        "RECEIVER": "bố",
+        "MESSAGE": "tối nay về muộn",
+        "PLATFORM": "whatsapp"
+      },
+      "value": "tối nay về muộn"
+    },
+    {
+      "text": "gọi điện cho mẹ",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "mẹ",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi điện cho chú Vương",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "chú Vương",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi cho anh Minh",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "anh Minh",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi điện cho chị Lan",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "chị Lan",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi cho bố",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "bố",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi điện cho chị",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "chị",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi cho anh",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "anh",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi điện cho em",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "em",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi cho bạn",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "bạn",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi video cho chị qua whatsapp",
+      "intent": "call-whatsapp",
+      "entities": {
+        "RECEIVER": "chị",
+        "MESSAGE": "",
+        "PLATFORM": "whatsapp"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi điện cho bạn qua whatsapp",
+      "intent": "call-whatsapp",
+      "entities": {
+        "RECEIVER": "bạn",
+        "MESSAGE": "",
+        "PLATFORM": "whatsapp"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi video cho mẹ qua whatsapp",
+      "intent": "call-whatsapp",
+      "entities": {
+        "RECEIVER": "mẹ",
+        "MESSAGE": "",
+        "PLATFORM": "whatsapp"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi điện cho bố qua whatsapp",
+      "intent": "call-whatsapp",
+      "entities": {
+        "RECEIVER": "bố",
+        "MESSAGE": "",
+        "PLATFORM": "whatsapp"
+      },
+      "value": ""
+    },
+    {
+      "text": "thêm liên hệ mới",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "tạo danh bạ mới",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "thêm số điện thoại mới",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "tạo liên hệ mới",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "tìm tin tức mới nhất hôm nay",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome"
+      },
+      "value": "tin tức mới nhất hôm nay"
+    },
+    {
+      "text": "tìm kiếm thông tin về covid",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome"
+      },
+      "value": "thông tin về covid"
+    },
+    {
+      "text": "tìm kiếm thông tin về thời tiết",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome"
+      },
+      "value": "thông tin về thời tiết"
+    },
+    {
+      "text": "tìm kiếm tin tức",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome"
+      },
+      "value": "tin tức"
+    },
+    {
+      "text": "tìm kiếm thông tin",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome"
+      },
+      "value": "thông tin"
+    },
+    {
+      "text": "tìm video trên youtube về nấu ăn",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "video về nấu ăn"
+    },
+    {
+      "text": "tìm kiếm bài hát trên youtube",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "bài hát"
+    },
+    {
+      "text": "tìm video trên youtube về học tiếng anh",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "video về học tiếng anh"
+    },
+    {
+      "text": "tìm kiếm video trên youtube",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "video"
+    },
+    {
+      "text": "tìm trên youtube nhạc sơn tùng MTP",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "nhạc sơn tùng MTP"
+    },
+    {
+      "text": "tìm nhạc sơn tùng MTP trên youtube",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "nhạc sơn tùng MTP"
+    },
+    {
+      "text": "tìm trên youtube bài hát hay",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "bài hát hay"
+    },
+    {
+      "text": "bật đèn pin lên",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt đèn pin",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "bật đèn pin",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt đèn pin đi",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "bật wifi",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt wifi",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "bật wifi lên",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt wifi đi",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "tăng âm lượng",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "+"
+    },
+    {
+      "text": "giảm âm lượng",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "-"
+    },
+    {
+      "text": "tăng âm thanh",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "+"
+    },
+    {
+      "text": "giảm âm thanh",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "-"
+    },
+    {
+      "text": "cho nhỏ tiếng xuống",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "-"
+    },
+    {
+      "text": "cho to tiếng lên",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "+"
+    },
+    {
+      "text": "bật đèn",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "mở đèn",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt đèn",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "đóng đèn",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "mở mạng",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "bật mạng",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt mạng",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "đóng mạng",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "mở camera chụp ảnh",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "image"
+    },
+    {
+      "text": "mở camera quay video",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    },
+    {
+      "text": "chụp ảnh",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "image"
+    },
+    {
+      "text": "quay video",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    },
+    {
+      "text": "mở camera chụp hình",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "image"
+    },
+    {
+      "text": "quay phim",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    },
+    {
+      "text": "đặt báo thức năm giờ sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "5:00"
+    },
+    {
+      "text": "đặt báo thức 7 giờ sáng ngày kia",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "day_after_tomorrow"
+      },
+      "value": "7:00"
+    },
+    {
+      "text": "đặt báo thức 6 giờ sáng thứ tư",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "wednesday"
+      },
+      "value": "6:00"
+    },
+    {
+      "text": "đặt báo thức 8 giờ sáng thứ hai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "monday"
+      },
+      "value": "8:00"
+    },
+    {
+      "text": "đặt báo thức 6 giờ sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "6:00"
+    },
+    {
+      "text": "đặt báo thức 8 giờ sáng thứ năm",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "thursday"
+      },
+      "value": "8:00"
+    },
+    {
+      "text": "đặt báo thức 7 giờ sáng thứ ba",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tuesday"
+      },
+      "value": "7:00"
+    },
+    {
+      "text": "đặt báo thức 9 giờ sáng thứ sáu",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "friday"
+      },
+      "value": "9:00"
+    },
+    {
+      "text": "đặt tôi báo thức lúc bảy giờ sáng ngày mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "7:00"
+    },
+    {
+      "text": "đặt báo thức lúc bẩy giờ sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "7:00"
+    },
+    {
+      "text": "đặt báo thức bảy giờ chiều mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "19:00"
+    },
+    {
+      "text": "đặt báo thức tám giờ tối mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "20:00"
+    },
+    {
+      "text": "đặt báo thức sáu giờ sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "6:00"
+    },
+    {
+      "text": "đặt báo thức vào lúc 5:45 chiều ngày mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "17:45"
+    },
+    {
+      "text": "đặt báo thức lúc 8:30 sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "8:30"
+    },
+    {
+      "text": "đặt báo thức 12:15 chiều mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "12:15"
+    },
+    {
+      "text": "đặt báo thức 15:30 ngày mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "15:30"
+    },
+    {
+      "text": "đặt báo thức 22:00 tối mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "22:00"
+    },
+    {
+      "text": "đặt báo thức 1:30 sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "1:30"
+    },
+    {
+      "text": "đặt báo thức 14:45 chiều mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "14:45"
+    },
+    {
+      "text": "đặt báo thức 9:15 sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "9:15"
+    },
+    {
+      "text": "đặt báo thức 18:30 tối mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "18:30"
+    },
+    {
+      "text": "tôi muốn đi chơi",
+      "intent": "unknown",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "hôm nay trời đẹp quá",
+      "intent": "unknown",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "tôi đói bụng",
+      "intent": "unknown",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "tôi muốn ngủ",
+      "intent": "unknown",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "hôm nay mệt quá",
+      "intent": "unknown",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "ghi hình",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    },
+    {
+      "text": "bắt đầu ghi hình",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    },
+    {
+      "text": "dừng ghi hình",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    }
+  ],
+  "test": [
+    {
+      "text": "nhắn tin cho anh là chiều nay về muộn",
+      "intent": "send-msg",
+      "entities": {
+        "RECEIVER": "anh",
+        "MESSAGE": "chiều nay về muộn",
+        "PLATFORM": "sms"
+      },
+      "value": "chiều nay về muộn"
+    },
+    {
+      "text": "gửi tin nhắn cho em qua whatsapp là mai đi học",
+      "intent": "send-msg-whatsapp",
+      "entities": {
+        "RECEIVER": "em",
+        "MESSAGE": "mai đi học",
+        "PLATFORM": "whatsapp"
+      },
+      "value": "mai đi học"
+    },
+    {
+      "text": "gọi điện cho chị",
+      "intent": "call",
+      "entities": {
+        "RECEIVER": "chị",
+        "MESSAGE": "",
+        "PLATFORM": "phone"
+      },
+      "value": ""
+    },
+    {
+      "text": "gọi video cho mẹ qua whatsapp",
+      "intent": "call-whatsapp",
+      "entities": {
+        "RECEIVER": "mẹ",
+        "MESSAGE": "",
+        "PLATFORM": "whatsapp"
+      },
+      "value": ""
+    },
+    {
+      "text": "tạo liên hệ mới",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": ""
+      },
+      "value": ""
+    },
+    {
+      "text": "tìm kiếm thông tin về thời tiết",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome"
+      },
+      "value": "thông tin về thời tiết"
+    },
+    {
+      "text": "tìm video trên youtube về học tiếng anh",
+      "intent": "search",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "youtube"
+      },
+      "value": "video về học tiếng anh"
+    },
+    {
+      "text": "bật wifi lên",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "wifi"
+      },
+      "value": "ON"
+    },
+    {
+      "text": "tắt đèn pin",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "flash"
+      },
+      "value": "OFF"
+    },
+    {
+      "text": "tăng âm thanh",
+      "intent": "control-device",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "volume"
+      },
+      "value": "+"
+    },
+    {
+      "text": "mở camera chụp hình",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "image"
+    },
+    {
+      "text": "quay phim",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": "video"
+    },
+    {
+      "text": "đặt báo thức 6 giờ sáng mai",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "tomorrow"
+      },
+      "value": "6:00"
+    },
+    {
+      "text": "đặt báo thức 8 giờ sáng thứ năm",
+      "intent": "set-alarm",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "thursday"
+      },
+      "value": "8:00"
+    },
+    {
+      "text": "tôi muốn ngủ",
+      "intent": "unknown",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": ""
+      },
+      "value": ""
+    }
+  ]
+}

@@ -1,69 +1,99 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from transformers import T5Tokenizer, T5ForConditionalGeneration
-import torch
+from predict import PhoBERTPredictor
+import uvicorn
+import os
 
-app = FastAPI()
+# Initialize FastAPI app
+app = FastAPI(
+    title="PhoBERT NLP Server",
+    description="NLP Server for Vietnamese Intent Classification and Entity Extraction",
+    version="1.0.0"
+)
 
-# Load model đã huấn luyện
-model_dir = "./nlp-command-model"
-tokenizer = T5Tokenizer.from_pretrained(model_dir)
-model = T5ForConditionalGeneration.from_pretrained(model_dir)
-model.eval()
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
+# Global predictor instance
+predictor = None
 
-# Lưu trữ hội thoại
-dialog_history = []
-
-# Request schema
-class InferenceRequest(BaseModel):
+class TextInput(BaseModel):
     text: str
-    with_context: bool = False
-    history_limit: int = 3
 
-# Xử lý inference
-def infer(text):
-    input_text = "trich xuat: " + text
-    input_ids = tokenizer.encode(input_text, return_tensors="pt", truncation=True).to(device)
-    output_ids = model.generate(input_ids, max_length=64, num_beams=4, early_stopping=True)
-    result = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-    return result
+class PredictionResponse(BaseModel):
+    text: str
+    intent: str
+    confidence: float
+    command: str
+    entities: dict
+    value: str
+    timestamp: str
 
-# Xử lý inference có context thông minh hơn
-def infer_with_context(text, history_limit=3):
-    global dialog_history
+@app.on_event("startup")
+async def startup_event():
+    """Initialize the model on startup"""
+    global predictor
+    try:
+        predictor = PhoBERTPredictor()
+        print("Model loaded successfully!")
+    except Exception as e:
+        print(f"Error loading model: {e}")
+        raise e
 
-    # Kiểm tra xem câu mới có phủ định/sửa không
-    negation_keywords = ["phải là", "ý là", "sửa lại", "không phải", "mình nói nhầm", "mình định nói"]
-    lowered_text = text.lower()
-    is_negation = any(kw in lowered_text for kw in negation_keywords)
+@app.get("/")
+async def root():
+    """Health check endpoint"""
+    return {"message": "PhoBERT NLP Server is running!"}
 
-    # Nếu là phủ định → xóa câu trước trong lịch sử (nếu có)
-    if is_negation and len(dialog_history) >= 1:
-        dialog_history.pop()  # loại bỏ câu trước
+@app.get("/health")
+async def health_check():
+    """Health check endpoint"""
+    return {"status": "healthy", "model_loaded": predictor is not None}
 
-    # Thêm câu hiện tại vào history
-    dialog_history.append(text)
+@app.post("/predict", response_model=PredictionResponse)
+async def predict_intent(input_data: TextInput):
+    """
+    Predict intent and extract entities from Vietnamese text
+    
+    Args:
+        input_data: TextInput containing the text to analyze
+        
+    Returns:
+        PredictionResponse with intent, entities, and other information
+    """
+    if predictor is None:
+        raise HTTPException(status_code=500, detail="Model not loaded")
+    
+    try:
+        result = predictor.predict(input_data.text)
+        return PredictionResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
 
-    # Format lại context cho rõ ràng (Cách 1)
-    formatted_context = ""
-    for i, utt in enumerate(dialog_history[-history_limit:], 1):
-        formatted_context += f"[Câu {i}]: {utt} "
+@app.post("/batch_predict")
+async def batch_predict(input_data: list[TextInput]):
+    """
+    Predict intent for multiple texts at once
+    
+    Args:
+        input_data: List of TextInput containing texts to analyze
+        
+    Returns:
+        List of PredictionResponse
+    """
+    if predictor is None:
+        raise HTTPException(status_code=500, detail="Model not loaded")
+    
+    try:
+        results = []
+        for item in input_data:
+            result = predictor.predict(item.text)
+            results.append(PredictionResponse(**result))
+        return results
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Batch prediction error: {str(e)}")
 
-    input_text = "trich xuat: " + formatted_context.strip()
-
-    input_ids = tokenizer.encode(input_text, return_tensors="pt", truncation=True).to(device)
-    output_ids = model.generate(input_ids, max_length=64, num_beams=4, early_stopping=True)
-    result = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-
-    return result
-
-
-@app.post("/infer")
-def run_inference(req: InferenceRequest):
-    if req.with_context:
-        result = infer_with_context(req.text, req.history_limit)
-    else:
-        result = infer(req.text)
-    return {"input": req.text, "output": result}
+if __name__ == "__main__":
+    uvicorn.run(
+        "app:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True
+    )
