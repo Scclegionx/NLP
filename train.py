@@ -36,13 +36,16 @@ class PhoBERTTrainer:
         
         return train_data, test_data
     
-    def prepare_data(self, data):
+    def prepare_data(self, data, fit=False):
         """Prepare data for training"""
         texts = [item['text'] for item in data]
         intents = [item['intent'] for item in data]
         
         # Encode labels
-        encoded_intents = self.label_encoder.fit_transform(intents)
+        if fit:
+            encoded_intents = self.label_encoder.fit_transform(intents)
+        else:
+            encoded_intents = self.label_encoder.transform(intents)
         
         # Tokenize texts
         tokenized = self.tokenizer(
@@ -72,11 +75,16 @@ class PhoBERTTrainer:
     
     def train(self, train_data, test_data, output_dir="./phobert_model"):
         """Train the PhoBERT model"""
+        # Fit label encoder on all data first
+        all_intents = [item['intent'] for item in train_data] + [item['intent'] for item in test_data]
+        self.label_encoder.fit(all_intents)
+        print(f"Fitted label encoder with {len(self.label_encoder.classes_)} classes: {self.label_encoder.classes_}")
+        
         print("Preparing training data...")
-        train_tokenized, train_labels = self.prepare_data(train_data)
+        train_tokenized, train_labels = self.prepare_data(train_data, fit=False)
         
         print("Preparing test data...")
-        test_tokenized, test_labels = self.prepare_data(test_data)
+        test_tokenized, test_labels = self.prepare_data(test_data, fit=False)
         
         # Create model
         num_labels = len(self.label_encoder.classes_)

@@ -28,7 +28,11 @@ class PhoBERTPredictor:
             "MESSAGE": "",
             "PLATFORM": "",
             "DEVICE": "",
-            "DATE": ""
+            "DATE": "",
+            "QUERY": "",
+            "ACTION": "",
+            "MODE": "",
+            "TIME": ""
         }
         
         text_lower = text.lower()
@@ -92,12 +96,27 @@ class PhoBERTPredictor:
             else:
                 entities["PLATFORM"] = "phone"
         
-        elif intent == "search":
+        elif intent in ["search-internet", "search-youtube"]:
             # Set platform based on keywords
-            if "youtube" in text_lower:
+            if "youtube" in text_lower or intent == "search-youtube":
                 entities["PLATFORM"] = "youtube"
             else:
                 entities["PLATFORM"] = "chrome"
+            
+            # Extract query
+            search_patterns = [
+                r"tìm\s+kiếm\s+(.+)$",
+                r"tìm\s+(.+)$",
+                r"về\s+(.+)$"
+            ]
+            for pattern in search_patterns:
+                match = re.search(pattern, text_lower)
+                if match:
+                    query = match.group(1).strip()
+                    # Remove platform keywords from query
+                    query = re.sub(r"\s+(trên\s+)?(youtube|chrome)\s*$", "", query)
+                    entities["QUERY"] = query
+                    break
         
         elif intent == "control-device":
             # Extract device and value - improved patterns
@@ -108,24 +127,24 @@ class PhoBERTPredictor:
             elif "âm lượng" in text_lower or "âm thanh" in text_lower or "tiếng" in text_lower:
                 entities["DEVICE"] = "volume"
             
-            # Determine value - improved patterns
+            # Determine action - improved patterns
             if "bật" in text_lower or "tăng" in text_lower or "mở" in text_lower or "to" in text_lower:
                 if entities["DEVICE"] == "volume":
-                    entities["value"] = "+"
+                    entities["ACTION"] = "+"
                 else:
-                    entities["value"] = "ON"
+                    entities["ACTION"] = "ON"
             elif "tắt" in text_lower or "giảm" in text_lower or "đóng" in text_lower or "nhỏ" in text_lower:
                 if entities["DEVICE"] == "volume":
-                    entities["value"] = "-"
+                    entities["ACTION"] = "-"
                 else:
-                    entities["value"] = "OFF"
+                    entities["ACTION"] = "OFF"
         
         elif intent == "open-cam":
             # Let model learn from dataset - minimal keyword matching
             if "chụp" in text_lower or "ảnh" in text_lower or "hình" in text_lower:
-                entities["value"] = "image"
+                entities["MODE"] = "image"
             elif "quay" in text_lower or "video" in text_lower or "phim" in text_lower or "ghi hình" in text_lower:
-                entities["value"] = "video"
+                entities["MODE"] = "video"
         
         elif intent == "set-alarm":
             # Extract time - let model learn from dataset, minimal regex only
@@ -138,9 +157,9 @@ class PhoBERTPredictor:
                 match = re.search(pattern, text_lower)
                 if match:
                     if ":" in pattern:
-                        entities["value"] = f"{match.group(1)}:{match.group(2).zfill(2)}"
+                        entities["TIME"] = f"{match.group(1)}:{match.group(2).zfill(2)}"
                     else:
-                        entities["value"] = f"{match.group(1)}:00"
+                        entities["TIME"] = f"{match.group(1)}:00"
                     break
             
             # Extract date
@@ -242,32 +261,7 @@ class PhoBERTPredictor:
         if entities["DATE"]:
             entities["DATE"] = self.calculate_date(entities["DATE"])
         
-        # Determine value based on intent
-        value = ""
-        text_lower = text.lower()  # Define text_lower here
-        
-        if intent in ["send-msg", "send-msg-whatsapp"]:
-            value = entities["MESSAGE"]
-        elif intent == "search":
-            # Extract search query from text - improved patterns
-            search_patterns = [
-                r"tìm\s+kiếm\s+(.+)$",
-                r"tìm\s+(.+)$",
-                r"về\s+(.+)$"
-            ]
-            for pattern in search_patterns:
-                match = re.search(pattern, text_lower)
-                if match:
-                    value = match.group(1).strip()
-                    # Remove platform keywords from value
-                    value = re.sub(r"\s+(trên\s+)?(youtube|chrome)\s*$", "", value)
-                    break
-        elif intent == "control-device":
-            value = entities.get("value", "")
-        elif intent == "open-cam":
-            value = entities.get("value", "")
-        elif intent == "set-alarm":
-            value = entities.get("value", "")
+        # No more value field - all information is in entities
         
         # Create response
         response = {
@@ -276,7 +270,6 @@ class PhoBERTPredictor:
             "confidence": confidence,
             "command": intent,
             "entities": entities,
-            "value": value,
             "timestamp": datetime.now().isoformat()
         }
         

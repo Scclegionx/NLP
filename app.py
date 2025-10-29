@@ -23,7 +23,6 @@ class PredictionResponse(BaseModel):
     confidence: float
     command: str
     entities: dict
-    value: str
     timestamp: str
 
 @app.on_event("startup")

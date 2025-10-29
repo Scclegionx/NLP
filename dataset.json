@@ -6,9 +6,10 @@
       "entities": {
         "RECEIVER": "mẹ",
         "MESSAGE": "con sắp về",
-        "PLATFORM": "sms"
-      },
-      "value": "con sắp về"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "nhắn tin cho chú Vương là mai đi chơi",
@@ -16,9 +17,10 @@
       "entities": {
         "RECEIVER": "chú Vương",
         "MESSAGE": "mai đi chơi",
-        "PLATFORM": "sms"
-      },
-      "value": "mai đi chơi"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho anh Minh là chiều nay về muộn",
@@ -26,9 +28,10 @@
       "entities": {
         "RECEIVER": "anh Minh",
         "MESSAGE": "chiều nay về muộn",
-        "PLATFORM": "sms"
-      },
-      "value": "chiều nay về muộn"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "nhắn tin cho chị Lan là tối nay về sớm",
@@ -36,9 +39,10 @@
       "entities": {
         "RECEIVER": "chị Lan",
         "MESSAGE": "tối nay về sớm",
-        "PLATFORM": "sms"
-      },
-      "value": "tối nay về sớm"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho bố là tối nay về muộn",
@@ -46,9 +50,10 @@
       "entities": {
         "RECEIVER": "bố",
         "MESSAGE": "tối nay về muộn",
-        "PLATFORM": "sms"
-      },
-      "value": "tối nay về muộn"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "nhắn tin cho chị là mai đi chơi",
@@ -56,9 +61,10 @@
       "entities": {
         "RECEIVER": "chị",
         "MESSAGE": "mai đi chơi",
-        "PLATFORM": "sms"
-      },
-      "value": "mai đi chơi"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho anh là chiều nay về muộn",
@@ -66,9 +72,10 @@
       "entities": {
         "RECEIVER": "anh",
         "MESSAGE": "chiều nay về muộn",
-        "PLATFORM": "sms"
-      },
-      "value": "chiều nay về muộn"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "nhắn tin cho em là tối nay về sớm",
@@ -76,9 +83,10 @@
       "entities": {
         "RECEIVER": "em",
         "MESSAGE": "tối nay về sớm",
-        "PLATFORM": "sms"
-      },
-      "value": "tối nay về sớm"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho bạn là mai đi học",
@@ -86,9 +94,10 @@
       "entities": {
         "RECEIVER": "bạn",
         "MESSAGE": "mai đi học",
-        "PLATFORM": "sms"
-      },
-      "value": "mai đi học"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "nhắn tin cho chị qua whatsapp là mai đi chơi",
@@ -96,9 +105,10 @@
       "entities": {
         "RECEIVER": "chị",
         "MESSAGE": "mai đi chơi",
-        "PLATFORM": "whatsapp"
-      },
-      "value": "mai đi chơi"
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho bạn qua whatsapp là hẹn gặp lúc 7h",
@@ -106,9 +116,10 @@
       "entities": {
         "RECEIVER": "bạn",
         "MESSAGE": "hẹn gặp lúc 7h",
-        "PLATFORM": "whatsapp"
-      },
-      "value": "hẹn gặp lúc 7h"
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "nhắn tin cho mẹ qua whatsapp là con sắp về",
@@ -116,9 +127,10 @@
       "entities": {
         "RECEIVER": "mẹ",
         "MESSAGE": "con sắp về",
-        "PLATFORM": "whatsapp"
-      },
-      "value": "con sắp về"
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho bố qua whatsapp là tối nay về muộn",
@@ -126,9 +138,10 @@
       "entities": {
         "RECEIVER": "bố",
         "MESSAGE": "tối nay về muộn",
-        "PLATFORM": "whatsapp"
-      },
-      "value": "tối nay về muộn"
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho mẹ",
@@ -136,9 +149,10 @@
       "entities": {
         "RECEIVER": "mẹ",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho chú Vương",
@@ -146,9 +160,10 @@
       "entities": {
         "RECEIVER": "chú Vương",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi cho anh Minh",
@@ -156,9 +171,10 @@
       "entities": {
         "RECEIVER": "anh Minh",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho chị Lan",
@@ -166,9 +182,10 @@
       "entities": {
         "RECEIVER": "chị Lan",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi cho bố",
@@ -176,9 +193,10 @@
       "entities": {
         "RECEIVER": "bố",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho chị",
@@ -186,9 +204,10 @@
       "entities": {
         "RECEIVER": "chị",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi cho anh",
@@ -196,9 +215,10 @@
       "entities": {
         "RECEIVER": "anh",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho em",
@@ -206,9 +226,10 @@
       "entities": {
         "RECEIVER": "em",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi cho bạn",
@@ -216,9 +237,10 @@
       "entities": {
         "RECEIVER": "bạn",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi video cho chị qua whatsapp",
@@ -226,9 +248,10 @@
       "entities": {
         "RECEIVER": "chị",
         "MESSAGE": "",
-        "PLATFORM": "whatsapp"
-      },
-      "value": ""
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho bạn qua whatsapp",
@@ -236,9 +259,10 @@
       "entities": {
         "RECEIVER": "bạn",
         "MESSAGE": "",
-        "PLATFORM": "whatsapp"
-      },
-      "value": ""
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi video cho mẹ qua whatsapp",
@@ -246,9 +270,10 @@
       "entities": {
         "RECEIVER": "mẹ",
         "MESSAGE": "",
-        "PLATFORM": "whatsapp"
-      },
-      "value": ""
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho bố qua whatsapp",
@@ -256,9 +281,10 @@
       "entities": {
         "RECEIVER": "bố",
         "MESSAGE": "",
-        "PLATFORM": "whatsapp"
-      },
-      "value": ""
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "thêm liên hệ mới",
@@ -266,9 +292,10 @@
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": ""
-      },
-      "value": ""
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "tạo danh bạ mới",
@@ -276,9 +303,10 @@
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": ""
-      },
-      "value": ""
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "thêm số điện thoại mới",
@@ -286,9 +314,10 @@
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": ""
-      },
-      "value": ""
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "tạo liên hệ mới",
@@ -296,129 +325,226 @@
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": ""
-      },
-      "value": ""
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": ""
+      }
+    },
+    {
+      "text": "thêm lịch mới cho cuộc họp",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "",
+        "TITLE": "cuộc họp"
+      }
+    },
+    {
+      "text": "tạo sự kiện cho cuộc họp",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "",
+        "TITLE": "cuộc họp"
+      }
+    },
+    {
+      "text": "tạo lịch hẹn bác sĩ",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "",
+        "TITLE": "hẹn bác sĩ"
+      }
+    },
+    {
+      "text": "tạo lịch hẹn gặp mặt tổ chức sinh nhật",
+      "intent": "add-contacts",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "",
+        "TITLE": "hẹn gặp mặt tổ chức sinh nhật"
+      }
     },
     {
       "text": "tìm tin tức mới nhất hôm nay",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "chrome"
-      },
-      "value": "tin tức mới nhất hôm nay"
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "tin tức mới nhất hôm nay"
+      }
+    },
+    {
+      "text": "tìm nhạc đồng quê",
+      "intent": "search-internet",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "nhạc đồng quê"
+      }
+    },
+    {
+      "text": "tìm nhạc sống mới nhất",
+      "intent": "search-internet",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "nhạc sống mới nhất"
+      }
     },
     {
       "text": "tìm kiếm thông tin về covid",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "chrome"
-      },
-      "value": "thông tin về covid"
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "thông tin về covid"
+      }
     },
     {
       "text": "tìm kiếm thông tin về thời tiết",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "chrome"
-      },
-      "value": "thông tin về thời tiết"
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "thông tin về thời tiết"
+      }
     },
     {
       "text": "tìm kiếm tin tức",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "chrome"
-      },
-      "value": "tin tức"
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "tin tức"
+      }
     },
     {
       "text": "tìm kiếm thông tin",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "chrome"
-      },
-      "value": "thông tin"
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "thông tin"
+      }
     },
     {
       "text": "tìm video trên youtube về nấu ăn",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "video về nấu ăn"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "video về nấu ăn"
+      }
     },
     {
       "text": "tìm kiếm bài hát trên youtube",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "bài hát"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "bài hát"
+      }
     },
     {
       "text": "tìm video trên youtube về học tiếng anh",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "video về học tiếng anh"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "video về học tiếng anh"
+      }
     },
     {
       "text": "tìm kiếm video trên youtube",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "video"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "video"
+      }
     },
     {
       "text": "tìm trên youtube nhạc sơn tùng MTP",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "nhạc sơn tùng MTP"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "nhạc sơn tùng MTP"
+      }
     },
     {
       "text": "tìm nhạc sơn tùng MTP trên youtube",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "nhạc sơn tùng MTP"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "nhạc sơn tùng MTP"
+      }
     },
     {
       "text": "tìm trên youtube bài hát hay",
-      "intent": "search",
+      "intent": "search-youtube",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "bài hát hay"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": "bài hát hay"
+      }
     },
     {
       "text": "bật đèn pin lên",
@@ -427,9 +553,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "ON"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt đèn pin",
@@ -438,9 +565,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "OFF"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "bật đèn pin",
@@ -449,9 +577,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "ON"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt đèn pin đi",
@@ -460,9 +589,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "OFF"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "bật wifi",
@@ -471,9 +601,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "ON"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt wifi",
@@ -482,9 +613,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "OFF"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "bật wifi lên",
@@ -493,9 +625,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "ON"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt wifi đi",
@@ -504,9 +637,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "OFF"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "tăng âm lượng",
@@ -515,9 +649,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "+"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "+"
+      }
     },
     {
       "text": "giảm âm lượng",
@@ -526,9 +661,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "-"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "-"
+      }
     },
     {
       "text": "tăng âm thanh",
@@ -537,9 +673,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "+"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "+"
+      }
     },
     {
       "text": "giảm âm thanh",
@@ -548,9 +685,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "-"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "-"
+      }
     },
     {
       "text": "cho nhỏ tiếng xuống",
@@ -559,9 +697,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "-"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "-"
+      }
     },
     {
       "text": "cho to tiếng lên",
@@ -570,9 +709,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "+"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "+"
+      }
     },
     {
       "text": "bật đèn",
@@ -581,9 +721,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "ON"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "mở đèn",
@@ -592,9 +733,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "ON"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt đèn",
@@ -603,9 +745,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "OFF"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "đóng đèn",
@@ -614,9 +757,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "OFF"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "mở mạng",
@@ -625,9 +769,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "ON"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "bật mạng",
@@ -636,9 +781,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "ON"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt mạng",
@@ -647,9 +793,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "OFF"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "đóng mạng",
@@ -658,9 +805,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "OFF"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "mở camera chụp ảnh",
@@ -669,9 +817,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "image"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "image"
+      }
     },
     {
       "text": "mở camera quay video",
@@ -680,9 +829,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     },
     {
       "text": "chụp ảnh",
@@ -691,9 +841,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "image"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "image"
+      }
     },
     {
       "text": "quay video",
@@ -702,9 +853,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     },
     {
       "text": "mở camera chụp hình",
@@ -713,9 +865,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "image"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "image"
+      }
     },
     {
       "text": "quay phim",
@@ -724,9 +877,34 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
+    },
+    {
+      "text": "mở cam để chụp",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "image"
+      }
+    },
+    {
+      "text": "mở cam để quay",
+      "intent": "open-cam",
+      "entities": {
+        "RECEIVER": "",
+        "MESSAGE": "",
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     },
     {
       "text": "đặt báo thức năm giờ sáng mai",
@@ -736,9 +914,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "5:00"
+        "DATE": "tomorrow",
+        "TIME": "5:00"
+      }
     },
     {
       "text": "đặt báo thức 7 giờ sáng ngày kia",
@@ -748,9 +926,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "day_after_tomorrow"
-      },
-      "value": "7:00"
+        "DATE": "day_after_tomorrow",
+        "TIME": "7:00"
+      }
     },
     {
       "text": "đặt báo thức 6 giờ sáng thứ tư",
@@ -760,9 +938,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "wednesday"
-      },
-      "value": "6:00"
+        "DATE": "wednesday",
+        "TIME": "6:00"
+      }
     },
     {
       "text": "đặt báo thức 8 giờ sáng thứ hai",
@@ -772,9 +950,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "monday"
-      },
-      "value": "8:00"
+        "DATE": "monday",
+        "TIME": "8:00"
+      }
     },
     {
       "text": "đặt báo thức 6 giờ sáng mai",
@@ -784,9 +962,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "6:00"
+        "DATE": "tomorrow",
+        "TIME": "6:00"
+      }
     },
     {
       "text": "đặt báo thức 8 giờ sáng thứ năm",
@@ -796,9 +974,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "thursday"
-      },
-      "value": "8:00"
+        "DATE": "thursday",
+        "TIME": "8:00"
+      }
     },
     {
       "text": "đặt báo thức 7 giờ sáng thứ ba",
@@ -808,9 +986,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tuesday"
-      },
-      "value": "7:00"
+        "DATE": "tuesday",
+        "TIME": "7:00"
+      }
     },
     {
       "text": "đặt báo thức 9 giờ sáng thứ sáu",
@@ -820,9 +998,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "friday"
-      },
-      "value": "9:00"
+        "DATE": "friday",
+        "TIME": "9:00"
+      }
     },
     {
       "text": "đặt tôi báo thức lúc bảy giờ sáng ngày mai",
@@ -832,9 +1010,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "7:00"
+        "DATE": "tomorrow",
+        "TIME": "7:00"
+      }
     },
     {
       "text": "đặt báo thức lúc bẩy giờ sáng mai",
@@ -844,9 +1022,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "7:00"
+        "DATE": "tomorrow",
+        "TIME": "7:00"
+      }
     },
     {
       "text": "đặt báo thức bảy giờ chiều mai",
@@ -856,9 +1034,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "19:00"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức tám giờ tối mai",
@@ -868,9 +1046,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "20:00"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức sáu giờ sáng mai",
@@ -880,9 +1058,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "6:00"
+        "DATE": "tomorrow",
+        "TIME": "6:00"
+      }
     },
     {
       "text": "đặt báo thức vào lúc 5:45 chiều ngày mai",
@@ -892,9 +1070,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "17:45"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức lúc 8:30 sáng mai",
@@ -904,9 +1082,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "8:30"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 12:15 chiều mai",
@@ -916,9 +1094,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "12:15"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 15:30 ngày mai",
@@ -928,9 +1106,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "15:30"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 22:00 tối mai",
@@ -940,9 +1118,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "22:00"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 1:30 sáng mai",
@@ -952,9 +1130,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "1:30"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 14:45 chiều mai",
@@ -964,9 +1142,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "14:45"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 9:15 sáng mai",
@@ -976,9 +1154,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "9:15"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "đặt báo thức 18:30 tối mai",
@@ -988,9 +1166,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "18:30"
+        "DATE": "tomorrow",
+        "TIME": ""
+      }
     },
     {
       "text": "tôi muốn đi chơi",
@@ -999,9 +1177,9 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": ""
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "hôm nay trời đẹp quá",
@@ -1010,9 +1188,9 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": ""
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "tôi đói bụng",
@@ -1021,9 +1199,9 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": ""
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "tôi muốn ngủ",
@@ -1032,9 +1210,9 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": ""
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "hôm nay mệt quá",
@@ -1043,9 +1221,9 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": ""
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "ghi hình",
@@ -1054,9 +1232,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     },
     {
       "text": "bắt đầu ghi hình",
@@ -1065,9 +1244,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     },
     {
       "text": "dừng ghi hình",
@@ -1076,9 +1256,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     }
   ],
   "test": [
@@ -1088,9 +1269,10 @@
       "entities": {
         "RECEIVER": "anh",
         "MESSAGE": "chiều nay về muộn",
-        "PLATFORM": "sms"
-      },
-      "value": "chiều nay về muộn"
+        "PLATFORM": "sms",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gửi tin nhắn cho em qua whatsapp là mai đi học",
@@ -1098,9 +1280,10 @@
       "entities": {
         "RECEIVER": "em",
         "MESSAGE": "mai đi học",
-        "PLATFORM": "whatsapp"
-      },
-      "value": "mai đi học"
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi điện cho chị",
@@ -1108,9 +1291,10 @@
       "entities": {
         "RECEIVER": "chị",
         "MESSAGE": "",
-        "PLATFORM": "phone"
-      },
-      "value": ""
+        "PLATFORM": "phone",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "gọi video cho mẹ qua whatsapp",
@@ -1118,9 +1302,10 @@
       "entities": {
         "RECEIVER": "mẹ",
         "MESSAGE": "",
-        "PLATFORM": "whatsapp"
-      },
-      "value": ""
+        "PLATFORM": "whatsapp",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "tạo liên hệ mới",
@@ -1128,29 +1313,34 @@
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": ""
-      },
-      "value": ""
+        "PLATFORM": "",
+        "DEVICE": "",
+        "DATE": ""
+      }
     },
     {
       "text": "tìm kiếm thông tin về thời tiết",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "chrome"
-      },
-      "value": "thông tin về thời tiết"
+        "PLATFORM": "chrome",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": ""
+      }
     },
     {
       "text": "tìm video trên youtube về học tiếng anh",
-      "intent": "search",
+      "intent": "search-internet",
       "entities": {
         "RECEIVER": "",
         "MESSAGE": "",
-        "PLATFORM": "youtube"
-      },
-      "value": "video về học tiếng anh"
+        "PLATFORM": "youtube",
+        "DEVICE": "",
+        "DATE": "",
+        "QUERY": ""
+      }
     },
     {
       "text": "bật wifi lên",
@@ -1159,9 +1349,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "wifi"
-      },
-      "value": "ON"
+        "DEVICE": "wifi",
+        "DATE": "",
+        "ACTION": "ON"
+      }
     },
     {
       "text": "tắt đèn pin",
@@ -1170,9 +1361,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "flash"
-      },
-      "value": "OFF"
+        "DEVICE": "flash",
+        "DATE": "",
+        "ACTION": "OFF"
+      }
     },
     {
       "text": "tăng âm thanh",
@@ -1181,9 +1373,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": "volume"
-      },
-      "value": "+"
+        "DEVICE": "volume",
+        "DATE": "",
+        "ACTION": "+"
+      }
     },
     {
       "text": "mở camera chụp hình",
@@ -1192,9 +1385,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "image"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "image"
+      }
     },
     {
       "text": "quay phim",
@@ -1203,9 +1397,10 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": "video"
+        "DEVICE": "",
+        "DATE": "",
+        "MODE": "video"
+      }
     },
     {
       "text": "đặt báo thức 6 giờ sáng mai",
@@ -1215,9 +1410,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "tomorrow"
-      },
-      "value": "6:00"
+        "DATE": "tomorrow",
+        "TIME": "6:00"
+      }
     },
     {
       "text": "đặt báo thức 8 giờ sáng thứ năm",
@@ -1227,9 +1422,9 @@
         "MESSAGE": "",
         "PLATFORM": "",
         "DEVICE": "",
-        "DATE": "thursday"
-      },
-      "value": "8:00"
+        "DATE": "thursday",
+        "TIME": "8:00"
+      }
     },
     {
       "text": "tôi muốn ngủ",
@@ -1238,9 +1433,9 @@
         "RECEIVER": "",
         "MESSAGE": "",
         "PLATFORM": "",
-        "DEVICE": ""
-      },
-      "value": ""
+        "DEVICE": "",
+        "DATE": ""
+      }
     }
   ]
 }
